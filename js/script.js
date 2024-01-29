@@ -6,6 +6,9 @@ createApp({
         return {
             myApiUrl: 'server.php',
             tasksArray: [],
+            taskItem: '',
+            done: '',
+
         }
     },
     mounted() {
@@ -17,12 +20,22 @@ createApp({
         getTasksArray() {
             axios.get(this.myApiUrl).then((response) => {
                 this.tasksArray = response.data;
-                console.log(this.tasksArray);
             })
         },
-        // Definisco la funzione di sbarramento delle task
-        doneToggle(index) {
-            this.tasksArray[index].done = !this.tasksArray[index].done
+        // Definisco la funzione aggiungie le task
+        addTask() {
+            const data = {
+                item: this.taskItem,
+
+            }
+            axios.post(this.myApiUrl, data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }).then((response) => {
+                    this.taskItem = '';
+                    this.tasksArray = response.data;
+
+                })
         }
     },
 }).mount('#app')

@@ -1,26 +1,26 @@
 [
     {
-        "task": "Portare giù il cane",
+        "task": "Portare gi\u00f9 il cane",
         "done": true
     },
     {
-        "task": "Portare giù il gatto",
+        "task": "Portare gi\u00f9 il gatto",
         "done": false
     },
     {
-        "task": "Portare giù il coccodrillo",
+        "task": "Portare gi\u00f9 il coccodrillo",
         "done": false
     },
     {
-        "task": "Portare giù la giraffa",
+        "task": "Portare gi\u00f9 la giraffa",
         "done": false
     },
     {
-        "task": "Portare giù il rinoceronte",
+        "task": "Portare gi\u00f9 il rinoceronte",
         "done": false
     },
     {
-        "task": "Portare giù il koala",
+        "task": "Portare gi\u00f9 il koala",
         "done": true
     }
 ]
