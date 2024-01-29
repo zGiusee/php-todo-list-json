@@ -24,19 +24,37 @@
     <div id="app">
         <div class="container">
             <div class="row">
+
+                <!-- Titolo -->
                 <div class="col-12">
-                    <h1>
-                        To-Zoo List
-                    </h1>
+                    <div>
+                        <h1>
+                            To-Zoo List
+                        </h1>
+                    </div>
                 </div>
 
                 <div class="col-12">
                     <div>
+
+                    </div>
+                </div>
+
+                <!-- Contenitore lista -->
+                <div class="col-12">
+                    <div>
                         <ul class="list-unstyled ">
-                            <li v-for="task,index in tasksArray " :key="index">{{ task.task }}</li>
+                            <li v-for="(task,index) in tasksArray ">
+                                <div @click="doneToggle(index)"
+                                    :class="tasksArray[index].done == true ? 'text-decoration-line-through' : ''">
+                                    {{ task.task }}
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
