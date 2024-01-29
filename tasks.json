@@ -1,0 +1,26 @@
+[
+    {
+        "task": "Portare giù il cane",
+        "done": true
+    },
+    {
+        "task": "Portare giù il gatto",
+        "done": false
+    },
+    {
+        "task": "Portare giù il coccodrillo",
+        "done": false
+    },
+    {
+        "task": "Portare giù la giraffa",
+        "done": false
+    },
+    {
+        "task": "Portare giù il rinoceronte",
+        "done": false
+    },
+    {
+        "task": "Portare giù il koala",
+        "done": true
+    },
+]
