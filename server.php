@@ -3,7 +3,7 @@
 // Recupero il contenuto di 'tasks.json'
 $tasksArray = file_get_contents('tasks.json');
 
-$tasksArrayList = json_decode($tasksArray);
+$tasksArrayList = json_decode($tasksArray, true);
 
 if (isset($_POST['item'])) {
 
@@ -13,6 +13,13 @@ if (isset($_POST['item'])) {
     ];
 
     array_push($tasksArrayList, $todoItem);
+
+    file_put_contents('tasks.json', json_encode($tasksArrayList));
+}
+
+if (isset($_POST['deleteIndex'])) {
+
+    unset($tasksArrayList[$_POST['deleteIndex']]);
 
     file_put_contents('tasks.json', json_encode($tasksArrayList));
 }

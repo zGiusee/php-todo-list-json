@@ -25,7 +25,7 @@ createApp({
         // Definisco la funzione aggiungie le task
         addTask() {
             const data = {
-                item: this.taskItem,
+                item: this.taskItem
 
             }
             axios.post(this.myApiUrl, data,
@@ -36,6 +36,20 @@ createApp({
                     this.tasksArray = response.data;
 
                 })
+        },
+        deleteTask(index) {
+            const data = {
+                deleteIndex: index
+
+            }
+            axios.post(this.myApiUrl, data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }).then((response) => {
+                    this.tasksArray = response.data;
+
+                })
         }
     },
+
 }).mount('#app')
