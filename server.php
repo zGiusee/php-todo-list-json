@@ -40,6 +40,7 @@ if (isset($_POST['toggleIndex'])) {
     $index = $_POST['toggleIndex'];
 
     // Recupero il valore della chiave done in posizione index
+    // e gli applico la condizione
     if ($tasksArrayList[$index]['done'] = true) {
 
         $tasksArrayList[$index]['done'] = false;

@@ -31,7 +31,6 @@ createApp({
                 {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 }).then((response) => {
-                    this.taskItem = '';
                     this.tasksArray = response.data;
 
                 })
@@ -50,7 +49,7 @@ createApp({
 
                 })
         },
-        // Funzione che de
+        // Funzione per far cambiare lo status
         doneToggle(index) {
             const data = {
                 toggleIndex: index,
