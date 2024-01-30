@@ -43,7 +43,7 @@
                 <!-- Contenitore lista -->
                 <div class="col-12">
                     <div class="p-2">
-                        <label for="task">Aggiugni una task</label>
+                        <label for="task" class="px-3">Aggiugni una task</label>
                         <input @keyup.enter="addTask" type="text" name="task" id="task" v-model="taskItem">
                     </div>
                     <div>
@@ -54,7 +54,7 @@
                                     :class="tasksArray[index].done == true ? 'text-decoration-line-through' : ''">
                                     {{ task.task }}
                                 </div>
-                                <div>
+                                <div class="py-2">
                                     <button @click="deleteTask(index)" type="btn btn-danger"> delete</button>
                                 </div>
                             </li>

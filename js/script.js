@@ -7,7 +7,6 @@ createApp({
             myApiUrl: 'server.php',
             tasksArray: [],
             taskItem: '',
-            done: '',
 
         }
     },
@@ -37,6 +36,7 @@ createApp({
 
                 })
         },
+        // Definisco la funzione che rimuove le  task
         deleteTask(index) {
             const data = {
                 deleteIndex: index
