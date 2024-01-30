@@ -49,7 +49,22 @@ createApp({
                     this.tasksArray = response.data;
 
                 })
+        },
+        // Funzione che de
+        doneToggle(index) {
+            const data = {
+                toggleIndex: index,
+
+            }
+            axios.post(this.myApiUrl, data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }).then((response) => {
+                    this.tasksArray = response.data;
+
+                })
         }
+
     },
 
 }).mount('#app')

@@ -22,6 +22,7 @@ if (isset($_POST['item'])) {
     file_put_contents('tasks.json', json_encode($tasksArrayList));
 }
 
+// Funzione che elimina gli oggetti
 if (isset($_POST['deleteIndex'])) {
 
     // Rimuovo l'oggetto nell' array
@@ -31,6 +32,27 @@ if (isset($_POST['deleteIndex'])) {
     // e poi ri utilizzo json_encode per riportare l'oggetto al formato json
     file_put_contents('tasks.json', json_encode($tasksArrayList));
 }
+
+// Funzioni di toggle per cambiare lo status
+if (isset($_POST['toggleIndex'])) {
+
+    // Inserisco l'index in una variabile
+    $index = $_POST['toggleIndex'];
+
+    // Recupero il valore della chiave done in posizione index
+    if ($tasksArrayList[$index]['done'] = true) {
+
+        $tasksArrayList[$index]['done'] = false;
+    } else {
+        $tasksArrayList[$index]['done'] = true;
+    }
+
+
+    // Inserisco i dati facendoli salvare con la funzione file_put_content
+    // e poi ri utilizzo json_encode per riportare l'oggetto al formato json
+    file_put_contents('tasks.json', json_encode($tasksArrayList));
+}
+
 
 // Applico la funzione header per la lettura del contenuto
 header('Content-type: application/json');
